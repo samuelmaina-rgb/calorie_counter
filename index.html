@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+
+       <h1 class="text-3xl font-bold text-center">
+        Daily Calorie Counter 
+    </h1>
+    <form id="foodForm" class="space-y-4">
+        <label for="foodName">Food Name</label>
+        <input class="w-full border rounded-lg p-2" type="text" id="foodName" placeholder="Enter Food Name Required">
+
+        <label for="calories">Calories</label>
+        <input class="w-full border rounded-lg p-2" type="number" id="calories" placeholder="Calories Contained" required>
+
+        <button class="w-full bg-green-600 text-white p-2 rounded-lg hover:bg-screen-700" type="submit">Add Food</button>
+    </form>
+    <h2>Today's Foods</h2>
+
+    <ul id="foodList">
+
+    </ul>
+    <h2>Total Calories: <span id="totalCalories">0</span></h2>
+    <button id="resetBtn">Reset Day</button> 
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
