@@ -33,7 +33,10 @@ function displayFoods(){
     foodList.innerHTML = "";
     foods.forEach(function(food, index){
         const listItem = document.createElement("li");
-        listItem.textContent = `${food.name}: ${food.calories} calories <button onclick = "deleteFood(${index})">Delete</button>`;
+        listItem.innerHTML = `
+        <div class="flex justify-between items-center bg-gray-100 p-3 rounded-lg mb-2">
+        <span>${food.name}: ${food.calories} calories</span> <button onclick = "deleteFood(${index})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">Delete</button>
+        </div>`;
         foodList.appendChild(listItem);
     })
 }
